@@ -1,3 +1,5 @@
+package 연습;
+
 // 최대공약수
 public class Euclid {
 

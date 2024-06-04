@@ -1,3 +1,5 @@
+package 연습;
+
 //factorial
 // 0! =1
 // n! = n * (n-1)! n>0

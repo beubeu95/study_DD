@@ -8,10 +8,14 @@ public class MergeSort {
     public static void mergeSort(int[] arr, int left, int right) {
         if (left < right) {
             int middle = (left + right) / 2;
+            // 여기까지 계속 왼쪽 분해 (middle =0 까지)
 
             // 좌측 절반 정렬
+            // 좌측 먼저 정렬 완료
             mergeSort(arr, left, middle);
+
             // 우측 절반 정렬
+            // 우측 먼저 정렬 완료
             mergeSort(arr, middle + 1, right);
 
             // 정렬된 두 배열을 병합
@@ -35,9 +39,11 @@ public class MergeSort {
         for (int j = 0; j < n2; ++j)
             rightArray[j] = arr[middle + 1 + j];
 
+
         // 병합 과정
         int i = 0, j = 0;
         int k = left;
+
         while (i < n1 && j < n2) {
             if (leftArray[i] <= rightArray[j]) {
                 arr[k] = leftArray[i];
@@ -56,11 +62,13 @@ public class MergeSort {
             arr[k] = leftArray[i];
             i++;
             k++;
+            System.out.println(Arrays.toString(arr));
         }
         while (j < n2) {
             arr[k] = rightArray[j];
             j++;
             k++;
+            System.out.println(Arrays.toString(arr));
         }
     }
 
