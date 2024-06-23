@@ -6,8 +6,8 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 
 public class BubbleSort {
-    // 버블 정렬 메소드
-    public static void bubbleSort(int[] arr) {
+    // 제네릭 버블 정렬 메소드
+    public static <T extends Comparable<T>> void bubbleSort(T[] arr) {
         int n = arr.length;
 
         // 배열의 요소들을 반복하여 정렬
@@ -15,8 +15,8 @@ public class BubbleSort {
             // 마지막 i개의 요소는 이미 정렬되었으므로 비교할 필요 없음
             for (int j = 0; j < n - 1 - i; j++) {
                 // 인접한 요소를 비교하여 순서가 잘못된 경우 교환
-                if (arr[j] > arr[j + 1]) {
-                    int temp = arr[j];
+                if (arr[j].compareTo(arr[j + 1]) > 0) {
+                    T temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
                 }
@@ -32,9 +32,9 @@ public class BubbleSort {
         System.out.println("정렬할 숫자들을 공백으로 구분하여 입력하세요:");
         String input = reader.readLine();
 
-        // 입력된 문자열을 공백 기준으로 나누어 정수 배열로 변환
+        // 입력된 문자열을 공백 기준으로 나누어 Integer 배열로 변환
         String[] stringArray = input.split(" ");
-        int[] arr = new int[stringArray.length];
+        Integer[] arr = new Integer[stringArray.length];
         for (int i = 0; i < stringArray.length; i++) {
             arr[i] = Integer.parseInt(stringArray[i]);
         }
