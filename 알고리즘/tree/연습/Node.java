@@ -1,4 +1,4 @@
-package 과제;
+package 연습;
 
 class Node<E> {
 

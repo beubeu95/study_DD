@@ -7,7 +7,7 @@ public class BubbleSort {
     // 버블 정렬 메소드
     public static void bubbleSort(int[] arr) {
         int n = arr.length;
-
+        //64 25 12 22 11 50
         // 배열의 요소들을 반복하여 정렬
         for (int i = 0; i < n - 1; i++) {
             // 마지막 i개의 요소는 이미 정렬되었으므로 비교할 필요 없음

@@ -7,7 +7,7 @@ public class InsertionSort {
     // 삽입 정렬 메소드
     public static void insertionSort(int[] arr) {
         int n = arr.length;
-
+        //64 25 12 22 11 50
         // 두 번째 요소부터 시작하여 배열의 각 요소를 순회
         for (int i = 1; i < n; i++) {
             int key = arr[i];

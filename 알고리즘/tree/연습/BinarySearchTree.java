@@ -1,11 +1,11 @@
 
-package 과제;
+package 연습;
 
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-import 과제.Tree;
+import 과제.Node;
 
 public class BinarySearchTree<E> implements Iterable<E>, Tree<E> {
 
