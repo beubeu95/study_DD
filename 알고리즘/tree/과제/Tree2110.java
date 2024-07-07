@@ -46,10 +46,10 @@ public class Tree2110 {
             }
 
              if(cnt >= C) {
-				max = mid;
+                 min = mid + 1;
 			}
 			else {
-				min = mid + 1;
+                 max = mid;
 			}
         }
         System.out.println(mid);
