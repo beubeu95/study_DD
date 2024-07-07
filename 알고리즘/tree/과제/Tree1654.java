@@ -46,6 +46,7 @@ public class Tree1654 {
 				min = mid + 1;
 			}
         }
+
         System.out.println(min-1);
     }
 

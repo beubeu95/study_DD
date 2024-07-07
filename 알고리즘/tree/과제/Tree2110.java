@@ -45,13 +45,11 @@ public class Tree2110 {
                 
             }
 
-            //C보다 작다 => 거리가 너무 넓으면 max = mid -1
-            //c보다 많다 => 거리가 너무 좁으면 min = mid+1
              if(cnt >= C) {
 				max = mid;
 			}
 			else {
-				min = mid - 1;
+				min = mid + 1;
 			}
         }
         System.out.println(mid);
