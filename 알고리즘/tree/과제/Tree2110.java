@@ -24,6 +24,7 @@ public class Tree2110 {
         for(int i =0; i<list.length;i++){
             list[i]= Integer.parseInt(br.readLine());
         }
+
         Arrays.sort(list);
 
         long max = list[N-1]- list[0];
@@ -32,17 +33,17 @@ public class Tree2110 {
 
         while(min<max) {
             mid = (min+max)/2;
+
             long cnt =1;
             long set = list[0];
 
             for(int i =1; i<list.length;i++) {
-                if(list[i]- set) {
+                if(list[i]- set>=min) {
                     cnt++;
                     set = list[i];
                 }
                 
             }
-
 
             //C보다 작다 => 거리가 너무 넓으면 max = mid -1
             //c보다 많다 => 거리가 너무 좁으면 min = mid+1
