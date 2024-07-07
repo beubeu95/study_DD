@@ -52,7 +52,7 @@ public class Tree2110 {
                  max = mid;
 			}
         }
-        System.out.println(mid);
+        System.out.println(mid-1);
     }
 
 
